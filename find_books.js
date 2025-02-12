@@ -53,9 +53,11 @@ let input = process.argv[2];
 
 function processYear(year) {
 
+    //checks that user gave a year
     if (isNaN(year) || year < 0) {
         console.log("You need to type in a year.")
     }
+    //adds book from books to selectedBooks based on year given
     else {
         let selectedBooks = []
         books.forEach(book => {
@@ -66,6 +68,7 @@ function processYear(year) {
 
         
     )    
+        //formats and prints each book in selectedBooks
         console.log("Books published after " + year + ":")
         selectedBooks.forEach(book => {
             console.log(book.title + ", " + book.yearPublished)
